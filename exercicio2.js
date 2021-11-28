@@ -58,17 +58,17 @@ let botaoProximo = document.querySelector('#proximo')
 let botaoAnterior = document.querySelector('#anterior')
 let slide = document.querySelector('#slide')
 
-//console.log(slide.src)
-
 let i = 0
 
 botaoProximo.addEventListener('click', function() {
   if (i < imagens.length - 1){
     i++;
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
-  } else if (i == imagens.length - 1){
+    slide.alt = imagens[i].descricao
+  } else {
     i = 0
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+    slide.alt = imagens[i].descricao
   }
 })
 
@@ -76,8 +76,10 @@ botaoAnterior.addEventListener('click', function() {
   if (i > 0){
     i--;
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
-  } else if (i == 0){
+    slide.alt = imagens[i].descricao
+  } else {
     i = imagens.length - 1
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+    slide.alt = imagens[i].descricao
   }
 })
