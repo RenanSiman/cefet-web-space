@@ -54,3 +54,24 @@ const imagens = [
     }
   ];
 
+let botaoProximo = document.querySelector('#proximo')
+let botaoAnterior = document.querySelector('#anterior')
+let slide = document.querySelector('#slide')
+
+//console.log(slide.src)
+
+let i = 0
+
+botaoProximo.addEventListener('click', function() {
+  if (i < imagens.length - 1){
+    i++;
+    slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+  }
+})
+
+botaoAnterior.addEventListener('click', function() {
+  if (i > 0){
+    i--;
+    slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+  }
+})
