@@ -15,4 +15,4 @@ botaoCalcular.addEventListener('click', function() {
 })
 
 //console.log('Quantidade de inputs na página: ' + inputs.length);
-console.log(`Quantidade de inputs na página: ${inputs.length}`);
+//console.log(`Quantidade de inputs na página: ${inputs.length}`);
