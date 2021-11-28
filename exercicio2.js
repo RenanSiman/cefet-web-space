@@ -66,12 +66,18 @@ botaoProximo.addEventListener('click', function() {
   if (i < imagens.length - 1){
     i++;
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+  } else if (i == imagens.length - 1){
+    i = 0
+    slide.src = servidorDasImagens + '/' + imagens[i].arquivo
   }
 })
 
 botaoAnterior.addEventListener('click', function() {
   if (i > 0){
     i--;
+    slide.src = servidorDasImagens + '/' + imagens[i].arquivo
+  } else if (i == 0){
+    i = imagens.length - 1
     slide.src = servidorDasImagens + '/' + imagens[i].arquivo
   }
 })
